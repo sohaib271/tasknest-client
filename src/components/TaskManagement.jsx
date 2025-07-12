@@ -22,7 +22,7 @@ function TaskManagement(){
   return <>
     <div className='parent p-3 border border-rounded'>
     <h2 className='mb-5'>Task Nest</h2>
-    <p>Welcome {user?.name}</p>
+    <p>Welcome {user.name}</p>
     <AddTask />
     <TaskList/>
   </div>

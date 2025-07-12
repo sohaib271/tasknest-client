@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
  const login=async()=>{
   const token=localStorage.getItem("token");
   try {
-    const res=await fetch(`http://localhost:8000/user/access`,{method:"GET", headers:{"Authorization":`Bearer ${token}`}, credentials:"include",});
+    const res=await fetch(`${import.meta.env.VITE_API_URL}/user/access`,{method:"GET", headers:{"Authorization":`Bearer ${token}`}, credentials:"include",});
    if (!res.ok) {
       const errorData = await response.json();
       throw new Error(errorData.error);

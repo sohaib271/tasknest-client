@@ -18,7 +18,7 @@ function App() {
     }
   }
   return <>
- {(!token && !user?.id) && <button onClick={checkPath}>Click to proceed</button>}
+ <button onClick={checkPath}>Click to proceed</button>
   <Outlet/>
   </>
 }

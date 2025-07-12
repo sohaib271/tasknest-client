@@ -10,7 +10,7 @@ function App() {
   const navi=useNavigate();
   
   function checkPath(){
-    if(token && user?.id){
+    if(token){
       navi("/mydashboard")
     }
     if(!token || !user.id){

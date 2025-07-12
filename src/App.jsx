@@ -10,7 +10,7 @@ function App() {
   const navi=useNavigate();
   
   function checkPath(){
-    if(token){
+    if(token && user?.id){
       navi("/mydashboard")
     }
     if(!token || !user.id){
@@ -18,7 +18,7 @@ function App() {
     }
   }
   return <>
- {!token && <button onClick={checkPath}>Click to proceed</button>}
+ {(!token && !user?.id) && <button onClick={checkPath}>Click to proceed</button>}
   <Outlet/>
   </>
 }
